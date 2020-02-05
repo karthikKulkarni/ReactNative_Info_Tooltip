@@ -7,7 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "clean": "watchman watch-del-all && rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/haste-map-react-native-packager-* && rm -rf $TMPDIR/metro-bundler-cache-* ",
     "clean:node": "rm -rf node_modules/ && yarn cache clean",
     "clean:ios": "rm -rf ios/build",
