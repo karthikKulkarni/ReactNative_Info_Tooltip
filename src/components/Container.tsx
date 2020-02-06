@@ -6,23 +6,27 @@ import PopupView from './PopupView';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 2,
   },
   tex1: {
     flexDirection: 'row',
     backgroundColor: 'yellow',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     marginTop: 40,
+    flex: 1,
   },
-  icon1: { flexDirection: 'row', alignItems: 'center' },
   text2: {
-    top: 400,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
 
 export const Container = () => {
-  const [tooltipPopupRef, setTooltipPopupRef] = useState(null);
+  const [tooltipPopupRef, setTooltipPopupRef] = useState<PopupView | null>(
+    null,
+  );
   return (
     <View style={styles.container}>
       <View style={styles.tex1}>
@@ -37,9 +41,7 @@ export const Container = () => {
           msg="This is a short message. Click on msg to close."
           tooltipId="tooltip_1"
         >
-          <View style={styles.icon1}>
-            <Icon name="information-outline" size={30} color="#900" />
-          </View>
+          <Icon name="information-outline" size={30} color="#900" />
         </Tooltip>
       </View>
 

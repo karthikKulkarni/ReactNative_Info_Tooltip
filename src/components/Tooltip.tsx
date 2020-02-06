@@ -3,20 +3,15 @@ import {
   View,
   PanResponder,
   PanResponderInstance,
-  StyleSheet,
+  ViewStyle,
 } from 'react-native';
 import PopupView from './PopupView';
-
-const styles = StyleSheet.create({
-  container: {
-    alignSelf: 'center',
-  },
-});
 
 type Props = {
   tooltip: PopupView | null;
   msg: string;
   tooltipId: string;
+  propStyle?: ViewStyle;
 };
 
 export class Tooltip extends Component<Props> {
@@ -37,10 +32,10 @@ export class Tooltip extends Component<Props> {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, propStyle } = this.props;
     return (
       // eslint-disable-next-line react/jsx-props-no-spreading
-      <View style={styles.container} {...this.panResponder.panHandlers}>
+      <View style={propStyle} {...this.panResponder.panHandlers}>
         {children}
       </View>
     );
