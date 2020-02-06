@@ -8,7 +8,7 @@ const getOrientation = (height: number, width: number): string => {
   return 'portrait';
 };
 
-const OrientationHOC = (WrappedComponent: any) => {
+const OrientationHOC = (WrappedComponent: any, otherProps?: any) => {
   const { height, width } = Dimensions.get('window');
   const [orientation, setOrientation] = useState<string>(
     getOrientation(height, width),
@@ -20,7 +20,7 @@ const OrientationHOC = (WrappedComponent: any) => {
       setOrientation(getOrientation(window.height, window.width));
     },
   );
-  return <WrappedComponent orientation={orientation} />;
+  return <WrappedComponent orientation={orientation} {...otherProps} />;
 };
 
 export default OrientationHOC;

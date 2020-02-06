@@ -34,7 +34,6 @@ export class Tooltip extends Component<Props> {
   render() {
     const { children, propStyle } = this.props;
     return (
-      // eslint-disable-next-line react/jsx-props-no-spreading
       <View style={propStyle} {...this.panResponder.panHandlers}>
         {children}
       </View>
