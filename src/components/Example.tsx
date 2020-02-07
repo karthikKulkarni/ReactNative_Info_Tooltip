@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export const Container = () => {
+export const Example = () => {
   const [tooltipPopupRef, setTooltipPopupRef] = useState<PopupView | null>(
     null,
   );
@@ -67,4 +67,4 @@ export const Container = () => {
   );
 };
 
-export default Container;
+export default Example;

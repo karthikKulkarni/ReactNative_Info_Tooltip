@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar, SafeAreaView, StyleSheet } from 'react-native';
-import { Container } from './components/Container';
+import { Example } from './components/Example';
 import OrientationHOC from './OrientationHOC';
 
 const styles = StyleSheet.create({
@@ -11,7 +11,7 @@ const App = () => (
   <>
     <StatusBar barStyle="dark-content" />
     <SafeAreaView style={styles.container}>
-      {OrientationHOC(Container)}
+      {OrientationHOC(Example)}
     </SafeAreaView>
   </>
 );
